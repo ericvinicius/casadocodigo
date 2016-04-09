@@ -3,20 +3,20 @@
 	<h:form>
 		<div>
 			<h:outputLabel>Titulo</h:outputLabel>
-			<h:inputText />
+			<h:inputText value="#{adminBooksBean.product.title}" />
 		</div>
 		<div>
 			<h:outputLabel>Descrição</h:outputLabel>
 		</div>
-		<h:inputTextarea cols="20" rows="10" />
+		<h:inputTextarea cols="20" rows="10" value="#{adminBooksBean.product.description}" />
 		<div></div>
 		<h:outputLabel>Número de páginas</h:outputLabel>
-		<h:inputText />
+		<h:inputText value="#{adminBooksBean.product.numberOfPages}"/>
 		<div>
 			<h:outputLabel>Preço</h:outputLabel>
-			<h:inputText />
+			<h:inputText value="#{adminBooksBean.product.price}" />
 		</div>
-		<h:commandButton value=" Gravar" />
+		<h:commandButton value=" Gravar" action="#{adminBooksBean.save()}" />
 	</h:form>
 </h:body>
 </html>
